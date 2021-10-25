@@ -5,7 +5,9 @@ pipeline {
            steps {
                script {
                    def data = readFile(file: 'SetupTemplateUpdateDBs.ps1')
+                   def data1 = readFile(file: 'DeployTemplateUpdateDBs.ps1')
                    println(data)
+                   println(data1)
                }
            }
        }
