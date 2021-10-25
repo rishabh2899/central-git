@@ -1,16 +1,6 @@
 pipeline {
    agent { label 'master' }
    stages {
-       stage('write') {
-           steps {
-               script {
-                   def date = new Date()
-                   def data = "Hello World\nSecond line\n" + date
-                   writeFile(file: 'SetupTemplateUpdateDBs.ps1', text: data)
-                   sh "ls -l"
-               }
-           }
-       }
        stage('read') {
            steps {
                script {
